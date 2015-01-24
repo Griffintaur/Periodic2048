@@ -2,13 +2,18 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
+  background: #996633;
+  background :url(../images/i.jpg);
+  background-position: left;
+  background-repeat: repeat;
+  background-size: contain;
+
+  color: black
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
 body {
-  margin: 80px 0; }
+  margin: 10px 0; }
 
 .heading:after {
   content: "";
@@ -53,13 +58,13 @@ h1.title {
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #bbada0;
+  background: black;
   padding: 15px 25px;
-  font-size: 25px;
+  font-size: 35px;
   height: 25px;
   line-height: 47px;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 10px;
   color: white;
   margin-top: 8px;
   text-align: center; }
@@ -149,7 +154,8 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #bbada0;
+  background: #33ccff;
+  opacity: 1;
   border-radius: 6px;
   width: 500px;
   height: 500px;
@@ -163,7 +169,7 @@ hr {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(238, 228, 218, 0.5);
+    background: rgba(238, 228, 218, 0);
     z-index: 100;
     text-align: center;
     -webkit-animation: fade-in 800ms ease 1200ms;
@@ -314,25 +320,46 @@ hr {
     font-size: 55px; }
   .tile.tile-2 .tile-inner {
     background: #eee4da;
+    background: url(../images/2.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-4 .tile-inner {
     background: #ede0c8;
+    background: url(../images/3.png);
+    background-size: contain;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-8 .tile-inner {
     color: #f9f6f2;
-    background: #f2b179; }
+    background: #f2b179;
+    background: url(../images/4.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0); }
   .tile.tile-16 .tile-inner {
     color: #f9f6f2;
-    background: #f59563; }
+    background: #f59563;
+    background: url(../images/5.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0); }
   .tile.tile-32 .tile-inner {
     color: #f9f6f2;
-    background: #f67c5f; }
+    background: #f67c5f;
+    background: url(../images/6.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0); }
   .tile.tile-64 .tile-inner {
     color: #f9f6f2;
-    background: #f65e3b; }
+    background: #f65e3b;
+    background: url(../images/7.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0); }
   .tile.tile-128 .tile-inner {
     color: #f9f6f2;
     background: #edcf72;
+    background: url(../images/8.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
@@ -341,6 +368,9 @@ hr {
   .tile.tile-256 .tile-inner {
     color: #f9f6f2;
     background: #edcc61;
+    background: url(../images/9.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
@@ -349,6 +379,9 @@ hr {
   .tile.tile-512 .tile-inner {
     color: #f9f6f2;
     background: #edc850;
+    background: url(../images/10.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
@@ -357,6 +390,9 @@ hr {
   .tile.tile-1024 .tile-inner {
     color: #f9f6f2;
     background: #edc53f;
+    background: url(../images/11.png);
+    background-size: contain;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
@@ -365,6 +401,9 @@ hr {
   .tile.tile-2048 .tile-inner {
     color: #f9f6f2;
     background: #edc22e;
+    background: url(../images/1.jpg);
+    background-size: contain;
+    color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
@@ -488,11 +527,11 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #8f7a66;
-  border-radius: 3px;
+  background: black;
+  border-radius: 10px;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: white;
   height: 40px;
   line-height: 42px;
   display: block;
@@ -551,7 +590,7 @@ hr {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #bbada0;
+    background: #33ccff;
     border-radius: 6px;
     width: 280px;
     height: 280px;
