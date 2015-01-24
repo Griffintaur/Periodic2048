@@ -1,174 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" manifest="cache.appcache">
-<head>
-  <meta charset="utf-8">
-  <title>2048</title>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Elemental-2048 by ankyAS</title>
+  </head>
 
-  <meta name="apple-itunes-app" content="app-id=868076805">
+  <body>
+    <a id="forkme_banner" href="https://github.com/ankyAS/Elemental-2048">View on GitHub</a>
+    <div class="shell">
 
-  <meta property="og:title" content="2048"/>
-  <meta property="og:site_name" content="2048"/>
-  <meta property="og:description" content="Join the numbers and get to the 2048 tile! Careful: this game is extremely addictive!"/>
-  <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png"/>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Elemental-2048</h1>
+            <h2>Elemental 2048:modified version of 2048</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-  <meta name="twitter:card" content="app" />
-  <meta name="twitter:site" content="@gabrielecirulli" />
-  <meta name="twitter:title" content="2048" />
-  <meta name="twitter:description" content="Join the numbers and get to the 2048 tile! Careful: this game is extremely addictive!" />
-  <meta name="twitter:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png" />
-  <meta name="twitter:url" content="http://gabrielecirulli.github.io/2048/" />
-  <meta name="twitter:app:country" content="US">
-  <meta name="twitter:app:name:iphone" content="2048">
-  <meta name="twitter:app:id:iphone" content="868076805">
-  <meta name="twitter:app:url:iphone" content="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805">
-  <meta name="twitter:app:name:ipad" content="2048">
-  <meta name="twitter:app:id:ipad" content="868076805">
-  <meta name="twitter:app:url:ipad" content="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805">
-  <meta name="twitter:app:name:googleplay" content="2048">
-  <meta name="twitter:app:id:googleplay" content="com.gabrielecirulli.app2048">
-  <meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048">
-</head>
-<body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
-    </div>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/ankyAS/Elemental-2048/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/ankyAS/Elemental-2048/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
-    <div class="above-game">
-      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-      <a class="restart-button">New Game</a>
-    </div>
 
-    <div class="app-notice">
-      <span class="notice-close-button">x</span>
-      <p><strong class="important">New:</strong> Get the new 2048 app for <a href="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805" target="_blank">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048" target="_blank">Android!</a></p>
-    </div>
+      <span class="banner-fix"></span>
 
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
-          <div class="score-sharing"></div>
-          <div class="mailing-list">
-            <!-- MailChimp Signup Form -->
-            <form action="http://gabrielecirulli.us8.list-manage.com/subscribe/post?u=991201206817cfb4e4247ed6c&amp;id=7928ea817b" method="post" name="mc-embedded-subscribe-form" class="mailing-list-form" target="_blank">
-              <strong>Get email updates from Gabriele</strong>
 
-              <input type="email" value="" name="EMAIL" class="mailing-list-email-field" placeholder="Your email address" spellcheck="false">
+      <section id="main_content">
+        <h1>
+<a id="elemental-2048" class="anchor" href="#elemental-2048" aria-hidden="true"><span class="octicon octicon-link"></span></a>Elemental 2048</h1>
 
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -9999px;">
-                <input type="text" name="b_991201206817cfb4e4247ed6c_7928ea817b" value="">
-              </div>
+<p>This game is modified version of original game of 2048 ;based on elements of periodic table</p>
 
-              <input type="submit" value="Go" name="subscribe" class="mailing-list-subscribe-button">
-            </form>
-          </div>
-        </div>
-      </div>
+<p>you can paly the game by clicking on the <a href="https://">PLAY NOW.</a></p>
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
-      <div class="tile-container">
+<p>Elemental 2048 is licensed under the <a href="https://github.com/ankyAs/2048/">MIT license.</a></p>
+      </section>
 
-      </div>
-    </div>
-
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
-    </p>
-    <hr>
-    <p>
-    <strong class="important">Note:</strong> The game on <a href="http://git.io/2048">this site</a> is the original version of 2048. Apps for <a href="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805" target="_blank">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048" target="_blank">Android</a> are also available. Other versions are derivatives or fakes, and should be used with caution.
-    </p>
-    <hr>
-    <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
-    </p>
-    <div class="sharing">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out 2048, a game where you join numbers to score high! #2048game" data-via="gabrielecirulli" data-url="http://git.io/2048" data-counturl="http://gabrielecirulli.github.io/2048/">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-      <form class="pp-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="NVNPJLTBZ8AME">
-        <button name="submit"><img src="meta/icon_pp.svg">Donate</button>
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-      </form>
-
-      <span class="btc-donate">
-        <a href="bitcoin:1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i">
-          <img src="meta/icon_bitcoin.svg">Donate BTC
-        </a>
-        <span class="address"><code>1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i</code></span>
-      </span>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/ankyAS">ankyAS</a> can be found on <a href="https://github.com/ankyAS/Elemental-2048">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
 
     </div>
-  </div>
 
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
-
-    ga("create", "UA-42620757-2", "gabrielecirulli.github.io");
-    ga("send", "pageview");
-  </script>
-</body>
+    
+  </body>
 </html>
