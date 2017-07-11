@@ -6,6 +6,9 @@ Here instead of numbers, we have symbols of the  elements which combined togethe
 
 My Main aim was to make learning fun instead of boring.
 
+# Play the Game
+You can enjoy the Game here. [Play Now](http://griffintaur.github.io/Periodic-Elemental-2048/)
+
 # ScreenShot
 ![ScreenShot](https://raw.githubusercontent.com/Griffintaur/Periodic-Elemental-2048/master/images/screenshot.JPG)
 
