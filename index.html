@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Elemental 2048</title>
+  <title>Periodic Elemental 2048</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
@@ -14,29 +14,28 @@
 
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=yes, minimal-ui">
 </head>
 <body>
   <div class="container">
+	<div class="left-container">
     <div class="heading">
-      <h1 class="title">Elemental 2048</h1>
-      <div class="scores-container">
+      <h2 class="title">Periodic  Elemental 2048</h2>
         <div class="score-container">0</div>
         <div class="best-container">0</div>
-      </div>
     </div>
+	<a class="restart-button">New Game</a>
   </br>
-    <div class="above-game">
-      <p class="game-intro">lets see whether you reach <strong>2048 tile!</strong> or not!!</p>
-      <a class="restart-button">New Game</a>
-    </div>
+
 
     <div class="game-container">
+	
       <div class="game-message">
+	  
         <p></p>
         <div class="lower">
 	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+          <a class="retry-button" class="above-game">Try again</a>
         </div>
       </div>
 
@@ -69,19 +68,25 @@
 
       <div class="tile-container">
 
-      </div>
-    </div>
-</br>
+  </div>
+  </div>
+  </div>
+  <aside class="right-container">
+	<div class="divider"></div>
+    <div class="above-game">
+      <p class="game-intro">This is the modified version of the famous 2048 game and it based on the periodic table elements.Lets Play the game with the twist of periodic table elements.</p>
 
-    <p class="game-explanation">
+    </div>
+	    <p class="game-explanation">
       <strong class="important">Instructions:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
     </p>
     
     <p>
-    this is a modified version of the popular 2048 game </br>Modified by <a href="http://github.com/ankyAs/2048" target="_blank">Ankit Singh.</a>    Based on <a href="https://github.com/gabrielecirulli/2048/" target="_blank">gabrielecirulli</a> 
+    </br>
+	<strong class="important">Modified by</strong> <a  href=https://github.com/Griffintaur/Periodic-Elemental-2048 target="_blank">Ankit Singh.</a>    <strong class="important">Based on</strong> <a  href=https://github.com/gabrielecirulli/2048 target="_blank">gabrielecirulli</a> 
     </p>
-  </div>
-
+	</aside>
+	</div>
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
