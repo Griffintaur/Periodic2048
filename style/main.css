@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #996633;
-  background :url(../images/i.jpg);
+  background :#DEAD79      ;
   background-position: left;
   background-repeat: repeat;
   background-size: contain;
@@ -20,11 +20,11 @@ body {
   display: block;
   clear: both; }
 
-h1.title {
-  font-size: 80px;
+h2.title {
+  font-size: px;
   font-weight: bold;
-  margin: 0;
-  display: block;
+  margin-right: 20px;
+  display: inline-block;
   float: left; }
 
 @-webkit-keyframes move-up {
@@ -52,6 +52,7 @@ h1.title {
     top: -50px;
     opacity: 0; } }
 .scores-container {
+	display: inline-block;	
   float: right;
   text-align: right; }
 
@@ -106,13 +107,14 @@ p {
   line-height: 1.65; }
 
 a {
-  color: #776e65;
+  color: #33FF9B  
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer; }
 
 strong.important {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+color:blue;  }
 
 hr {
   border: none;
@@ -121,9 +123,26 @@ hr {
   margin-bottom: 30px; }
 
 .container {
-  width: 500px;
-  margin: 0 auto; }
-
+  width: 800px;
+  margin: 0 auto;
+}
+.right-container{
+	width: 200px;
+  display: inline-block;
+  float:right;
+  margin: 0 auto;
+}
+.left-container{
+	width: 600px;
+  display: inline-block;
+  float:left;
+}
+.divider{
+    width:5px;
+    height:100px;
+    display:inline-block;
+}
+  
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
@@ -522,7 +541,7 @@ hr {
 
 .game-intro {
   float: left;
-  line-height: 42px;
+  line-height: 22px;
   margin-bottom: 0; }
 
 .restart-button {
@@ -532,14 +551,15 @@ hr {
   padding: 0 20px;
   text-decoration: none;
   color: white;
-  height: 40px;
-  line-height: 42px;
-  display: block;
+  height: 50px;
+  line-height: 60px;
+  display: inline-block;
   text-align: center;
-  float: right; }
+  }
 
 .game-explanation {
-  margin-top: 50px; }
+  margin-top: 30px;
+color:#33FFF1;  }
 
 @media screen and (max-width: 520px) {
   html, body {
@@ -556,6 +576,17 @@ hr {
   .container {
     width: 280px;
     margin: 0 auto; }
+.right-container{
+	width: 100px;
+  display: inline-block;
+  float:right;
+  margin: 0 auto;
+}
+.left-container{
+	width: 180px;
+  display: inline-block;
+  float:left;
+}
 
   .score-container, .best-container {
     margin-top: 0;
