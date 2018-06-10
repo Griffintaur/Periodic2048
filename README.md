@@ -17,3 +17,5 @@ The code is released under MIT license and free to use.
 ## Contribute
 Changes and improvements are more than welcome! Feel free to fork and open a pull request.
 
+  [![Donate](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://www.paypal.me/kitabkalam/25usd)
+
