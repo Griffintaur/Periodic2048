@@ -46,6 +46,21 @@ HTMLActuator.prototype.clearContainer = function (container) {
   }
 };
 
+var customTileLabels = 
+[
+  "He",
+  "C",
+  "O",
+  "F",
+  "K",
+  "Fe",
+  "Zn",
+  "Br",
+  "Kr",
+  "Au",
+  "U"
+];
+
 HTMLActuator.prototype.addTile = function (tile) {
   var self = this;
 
@@ -62,7 +77,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  inner.textContent = customTileLabels[Math.log2(tile.value) - 1];
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
