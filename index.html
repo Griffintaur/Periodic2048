@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Periodic Elemental 2048</title>
+  <head>
+    <meta charset="utf-8">
+    <title>Periodic Elemental 2048</title>
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
-  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+    <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+    <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=yes, minimal-ui">
-</head>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=yes, minimal-ui">
+  </head>
 
-<body>
-  <div class="container">
-	<div class="left-container">
-    <div class="heading">
-      <h2 class="title">Periodic  Elemental 2048</h2>
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-    </div>
-	<a class="restart-button">New Game</a>
-  </br>
+  <body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
 
-    <div class="game-container">
-	
-      <div class="game-message">
-        <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button" class="above-game">Try again</a>
-        </div>
+      <!-- LEFT CONTAINER -->
+    	<div class="left-container">
+          <div class="heading">
+            <h2 class="title">Periodic  Elemental 2048</h2>
+              <div class="score-container">0</div>
+              <div class="best-container">0</div>
+          </div>
+    	    <a class="restart-button">New Game</a>
+          </br>
+
+          <div class="game-container">
+
+            <div class="game-message">
+              <div class="lower">
+      	        <a class="keep-playing-button">Keep going</a>
+                <a class="retry-button" class="above-game">Try again</a>
+              </div>
+            </div>
+
+            <div class="grid-container">
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+            </div>
+
+            <div class="tile-container"></div>
+          </div>
+
       </div>
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
+      <!-- RIGHT CONTAINER  -->
+      <aside class="right-container">
+      	<div class="divider"></div>
+          <div class="above-game">
+            <p class="game-intro">This is a modified version of the famous 2048 game, based on the periodic table of elements. Let's play the game with a twist!</p>
+          </div>
 
-      <div class="tile-container">
+    	     <p class="game-explanation">
+             <strong class="important">Instructions:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same symbol touch, they <strong>merge into one!</strong>
+           </p>
 
-  </div>
-  </div>
-  </div>
-
-  <aside class="right-container">
-	<div class="divider"></div>
-    <div class="above-game">
-      <p class="game-intro">This is a modified version of the famous 2048 game, based on the periodic table of elements. Let's play the game with a twist!</p>
+          <p>
+            </br>
+            <strong class="important">Modified and Enhanced by</strong> <a  href=https://github.com/Griffintaur/Periodic-Elemental-2048 target="_blank">Ankit Singh.</a>    <strong class="important">Based on</strong> <a  href=https://github.com/gabrielecirulli/2048 target="_blank">gabrielecirulli</a>
+          </p>
+    	</aside>
     </div>
 
-	  <p class="game-explanation">
-      <strong class="important">Instructions:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same symbol touch, they <strong>merge into one!</strong>
-    </p>
-    
-    <p>
-      </br>
-      <strong class="important">Modified and Enhanced by</strong> <a  href=https://github.com/Griffintaur/Periodic-Elemental-2048 target="_blank">Ankit Singh.</a>    <strong class="important">Based on</strong> <a  href=https://github.com/gabrielecirulli/2048 target="_blank">gabrielecirulli</a> 
-    </p>
-	</aside>
-  </div>
-  
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
-</body>
+    <script src="js/bind_polyfill.js"></script>
+    <script src="js/classlist_polyfill.js"></script>
+    <script src="js/animframe_polyfill.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/html_actuator.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/tile.js"></script>
+    <script src="js/local_storage_manager.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/application.js"></script>
+  </body>
 </html>
