@@ -159,24 +159,18 @@ hr {
 }
 
 .right-container {
-  width: 200px;
+  width: 150px;
   display: inline-block;
   float: right;
   margin: 0 auto;
-  width: 80%;
   text-align: center;
+  top: 200px;
 }
 
 .left-container {
-  width: 600px;
+  width: 650px;
   display: inline-block;
   float: left;
-}
-
-.right-container {
-  top: 200px;
-  width: 200px;
-  display: inline-block;
 }
 
 .divider {
