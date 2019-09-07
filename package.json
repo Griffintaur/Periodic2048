@@ -10,6 +10,6 @@
     "node-sass": "^4.12.0"
   },
   "scripts":{
-    "compile-scss": "node-sass --watch scss -o css"
+    "compile-scss": "node-sass style/scss -o style/css"
   }
 }
