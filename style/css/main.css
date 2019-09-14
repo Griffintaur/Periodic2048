@@ -3,7 +3,6 @@
 @import url(title.css);
 @import url(scores.css);
 @import url(animation.css);
-@import url(mobile.css);
 
 .game-container {
   margin-top: 40px;
