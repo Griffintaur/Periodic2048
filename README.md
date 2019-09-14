@@ -10,7 +10,7 @@ For example, He(2) and He(2) are combined to Be(4).
 You can enjoy the game here: [Play Now](https://mikeiit.github.io/Periodic2048/)
 
 # ScreenShot
-![ScreenShot](https://raw.githubusercontent.com/mikeiit/Periodic2048/master/gameUI.JPG)
+![ScreenShot](gameUI.jpg)
 
 ## License
 The code is released under MIT license and free to use.
