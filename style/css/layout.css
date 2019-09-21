@@ -52,6 +52,28 @@ strong.important {
     width: 800px;
     margin: 0 auto;
   }
+
+  .game-container {
+    margin-top: 40px;
+    position: relative;
+    padding: 15px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -ms-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    background: #33ccff;
+    opacity: 1;
+    border-radius: 6px;
+    width: 500px;
+    height: 500px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
   
   .right-container {
     width: 150px;
@@ -70,4 +92,34 @@ strong.important {
     width: 5px;
     height: 100px;
     display: inline-block;
+  }
+
+  .above-game:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .game-intro {
+    float: left;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+  
+  .restart-button {
+    display: inline-block;
+    background: black;
+    border-radius: 10px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    height: 50px;
+    line-height: 60px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .game-explanation {
+    margin-top: 30px;
+    color: #33FFF1;
   }
