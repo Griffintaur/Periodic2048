@@ -1,0 +1,74 @@
+.scores-container {
+    display: inline-block;
+    text-align: right;
+}
+
+%single-container {
+    position: relative;
+    display: inline-block;
+    background: black;
+    padding: 15px 25px;
+    font-size: 35px;
+    height: 25px;
+    line-height: 47px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+}
+
+%container-after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da;
+}
+
+%container-addition {
+    position: absolute;
+    right: 30px;
+    color: red;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: rgba(119, 110, 101, 0.9);
+    z-index: 100;
+    -webkit-animation: move-up 600ms ease-in;
+    -moz-animation: move-up 600ms ease-in;
+    animation: move-up 600ms ease-in;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.score-container{
+    @extend %single-container;
+
+    &:after {
+        @extend %container-after;
+        content: "Score";
+    }
+
+    .score-addition {
+        @extend %container-addition;
+    }
+}
+
+.best-container {
+    @extend %single-container;
+
+    &:after {
+        @extend %container-after;
+        content: "Best";
+    }
+
+    .score-addition {
+        @extend %container-addition;
+    }
+}
