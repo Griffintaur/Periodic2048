@@ -13,6 +13,11 @@
     "compile-scss": "node-sass style/scss -o style/css",
     "compile-scss-title": "node-sass style/scss/title.scss style/css/title.css",
     "compile-scss-score": "node-sass style/scss/score.scss style/css/score.css",
-    "compile-scss-tile": "node-sass style/scss/tile.scss style/css/tile.css"
+    "compile-scss-tile": "node-sass style/scss/tile.scss style/css/tile.css",
+    "compile-scss-message": "node-sass style/scss/message.scss style/css/message.css",
+    "compile-scss-main": "node-sass style/scss/main.scss style/css/main.css",
+    "compile-scss-layout": "node-sass style/scss/layout.scss style/css/layout.css",
+    "compile-scss-grid": "node-sass style/scss/grid.scss style/css/grid.css",
+    "compile-scss-animation": "node-sass style/scss/animation.scss style/css/animation.css"
   }
 }

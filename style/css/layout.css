@@ -1,125 +1,108 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    background: #996633;
-    background: #DEAD79;
-    background-position: left;
-    background-repeat: repeat;
-    background-size: contain;
-    color: black;
-    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-    font-size: 18px;
-}
+  margin: 0;
+  padding: 0;
+  background: #996633;
+  background: #DEAD79;
+  background-position: left;
+  background-repeat: repeat;
+  background-size: contain;
+  color: black;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px; }
 
 body {
-    margin: 10px 0;
-}
+  margin: 10px 0; }
 
 p {
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 1.65;
-}
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.65; }
 
 a {
-    color: #33FF9B;
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
-}
+  color: #33FF9B;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer; }
 
 .heading:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
+  content: "";
+  display: block;
+  clear: both; }
 
 strong.important {
-    text-transform: uppercase;
-    color: blue;
-  }
-  
-  hr {
-    border: none;
-    border-bottom: 1px solid #d8d4d0;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .container {
-    width: 800px;
-    margin: 0 auto;
-  }
+  text-transform: uppercase;
+  color: blue; }
 
-  .game-container {
-    margin-top: 40px;
-    position: relative;
-    padding: 15px;
-    cursor: default;
-    -webkit-touch-callout: none;
-    -ms-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -ms-touch-action: none;
-    touch-action: none;
-    background: #33ccff;
-    opacity: 1;
-    border-radius: 6px;
-    width: 500px;
-    height: 500px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  .right-container {
-    width: 150px;
-    float: right;
-    margin: 0 auto;
-    text-align: center;
-    top: 200px;
-  }
-  
-  .left-container {
-    width: 650px;
-    display: inline-block;
-  }
+hr {
+  border: none;
+  border-bottom: 1px solid #d8d4d0;
+  margin-top: 20px;
+  margin-bottom: 30px; }
 
-  .divider {
-    width: 5px;
-    height: 100px;
-    display: inline-block;
-  }
+.container {
+  width: 800px;
+  margin: 0 auto; }
 
-  .above-game:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  
-  .game-intro {
-    float: left;
-    line-height: 22px;
-    margin-bottom: 0;
-  }
-  
-  .restart-button {
-    display: inline-block;
-    background: black;
-    border-radius: 10px;
-    padding: 0 20px;
-    text-decoration: none;
-    color: white;
-    height: 50px;
-    line-height: 60px;
-    display: inline-block;
-    text-align: center;
-  }
-  
-  .game-explanation {
-    margin-top: 30px;
-    color: #33FFF1;
-  }
+.game-container {
+  margin-top: 40px;
+  position: relative;
+  padding: 15px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -ms-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  background: #33ccff;
+  opacity: 1;
+  border-radius: 6px;
+  width: 500px;
+  height: 500px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.right-container {
+  width: 150px;
+  float: right;
+  margin: 0 auto;
+  text-align: center;
+  top: 200px; }
+
+.left-container {
+  width: 650px;
+  display: inline-block; }
+
+.divider {
+  width: 5px;
+  height: 100px;
+  display: inline-block; }
+
+.above-game:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.game-intro {
+  float: left;
+  line-height: 22px;
+  margin-bottom: 0; }
+
+.restart-button {
+  display: inline-block;
+  background: black;
+  border-radius: 10px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: white;
+  height: 50px;
+  line-height: 60px;
+  display: inline-block;
+  text-align: center; }
+
+.game-explanation {
+  margin-top: 30px;
+  color: #33FFF1; }
