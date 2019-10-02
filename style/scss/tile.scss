@@ -1,0 +1,115 @@
+@import '_elements';
+@import '_pow';
+
+.tile-container {
+    position: absolute;
+    z-index: 2;
+}
+
+%tileBase {
+    width: 107px;
+    height: 107px;
+    line-height: 107px;
+}
+
+.tile {
+    @extend %tileBase;
+
+    .tile-inner {
+        @extend %tileBase;
+    }
+}
+
+$step: 121;
+
+@for $x from 1 through 4 {
+    @for $y from 1 through 4 {
+        .tile.tile-position-#{$x}-#{$y} {
+            $x1: $x - 1;
+            $y1: $y - 1;
+            -webkit-transform: translate(#{$x1*$step}px, #{$y1*$step}px);
+            -moz-transform: translate(#{$x1*$step}px, #{$y1*$step}px);
+            transform: translate(#{$x1*$step}px, #{$y1*$step}px);
+        }
+    }
+}
+
+.tile {
+    position: absolute;
+    -webkit-transition: 100ms ease-in-out;
+    -moz-transition: 100ms ease-in-out;
+    transition: 100ms ease-in-out;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+
+    .tile-inner {
+        border-radius: 3px;
+        background: #eee4da;
+        text-align: center;
+        font-weight: bold;
+        z-index: 10;
+        font-size: 55px;
+    }
+}
+
+$backgrounds: (2: #eee4da,
+    4: #ede0c8,
+    8: #f2b179,
+    16:#f59563,
+    32:#f67c5f,
+    64:#f65e3b);
+
+@for $exp from 1 through 6 {
+    $atom: pow(2, $exp);
+
+    .tile.tile-#{$atom} {
+        .tile-inner {
+            @if $atom>=8 {
+                color: #f9f6f2;
+            }
+
+            background: map-get($map: $backgrounds, $key:$atom);
+            background: map-get($map: $elementImages, $key: $atom);
+            background-size: contain;
+            color: rgba(0, 0, 0, 0);
+
+            @if $atom <=4 {
+                box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+            }
+        }
+    }
+}
+
+.tile.tile-super {
+    .tile-inner {
+        color: #f9f6f2;
+        background: #3c3a32;
+        font-size: 30px;
+    }
+}
+
+
+
+.tile-new {
+    .tile-inner {
+        -webkit-animation: appear 200ms ease 100ms;
+        -moz-animation: appear 200ms ease 100ms;
+        animation: appear 200ms ease 100ms;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+    }
+}
+
+.tile-merged {
+    .tile-inner {
+        z-index: 20;
+        -webkit-animation: pop 200ms ease 100ms;
+        -moz-animation: pop 200ms ease 100ms;
+        animation: pop 200ms ease 100ms;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+    }
+}

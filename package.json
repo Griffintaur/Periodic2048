@@ -12,6 +12,7 @@
   "scripts":{
     "compile-scss": "node-sass style/scss -o style/css",
     "compile-scss-title": "node-sass style/scss/title.scss style/css/title.css",
-    "compile-scss-score": "node-sass style/scss/score.scss style/css/score.css"
+    "compile-scss-score": "node-sass style/scss/score.scss style/css/score.css",
+    "compile-scss-tile": "node-sass style/scss/tile.scss style/css/tile.css"
   }
 }
