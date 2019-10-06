@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #996633;
-  background :#DEAD79;
+  background :#ecfcff;
   background-position: left;
   background-repeat: repeat;
   background-size: contain;
@@ -23,11 +23,13 @@ body {
   clear: both; 
 }
 
-h2.title {
+.title {
   font-size: px;
   font-weight: bold;
   margin-right: 20px;
   display: inline-block;
+  font-family: 'Grenze', serif;
+  color: #2a1a5e;
 }
 
 @-webkit-keyframes move-up {
@@ -75,6 +77,9 @@ h2.title {
   color: white;
   margin-top: 8px;
   text-align: center;
+  margin-top: 30px;
+   	padding:20px;
+	margin-right:30px
 }
 
   .score-container:after, .best-container:after {
@@ -121,15 +126,15 @@ p {
 }
 
 a {
-  color: #33FF9B;
+  color: #a32f80;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
 
 strong.important {
   text-transform: uppercase;
-  color:blue;
+  color:black;
 }
 
 hr {
@@ -143,7 +148,18 @@ hr {
   width: 800px;
   margin: 0 auto;
 }
+.screen{
+	background-color: #ff6363;
+	border-radius:10px;
+	margin-top: 20px;
+	padding:5px;
+	box-shadow: 0 0 2px 0.5px #000000;
+}
+.important{
+	  font-family: 'Grenze', serif;
+	  font-size:1.3em;
 
+}
 .right-container{
 	width: 200px;
   display: inline-block;
@@ -660,6 +676,7 @@ hr {
   clear: both;
 }
 
+
 .game-intro {
   float: left;
   line-height: 22px;
@@ -677,6 +694,10 @@ hr {
   line-height: 60px;
   display: inline-block;
   text-align: center;
+  margin-top: 30px;
+  position:relative;
+  bottom:12px;
+  padding:8px
 }
 
 .game-explanation {
@@ -712,9 +733,11 @@ hr {
     float: left;  }
 
   .score-container, .best-container {
-    margin-top: 0;
     padding: 15px 10px;
-    min-width: 40px; }
+    min-width: 40px; 
+    margin-top: 30px;
+   	padding:20px;
+	margin-right:30px}
 
   .heading {
     margin-bottom: 10px; }
