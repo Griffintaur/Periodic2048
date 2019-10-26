@@ -1,3 +1,17 @@
+var elementSymbols = {
+  "2": "He",
+  "4": "C",
+  "8": "O",
+  "16": "F",
+  "32": "K",
+  "64": "Fe",
+  "128": "Zn",
+  "256": "Br",
+  "512": "Kr",
+  "1024": "Au",
+  "2048": "2048"
+};
+
 function Tile(position, value) {
   this.x                = position.x;
   this.y                = position.y;
