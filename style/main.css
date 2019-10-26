@@ -132,6 +132,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 strong.important {
   text-transform: uppercase;
   color:black;
@@ -325,10 +329,9 @@ hr {
   z-index: 2;
 }
 
-.tile, .tile .tile-inner {
+.tile {
   width: 107px;
   height: 107px;
-  line-height: 107px;
 }
 
 .tile.tile-position-1-1 {
@@ -429,6 +432,8 @@ hr {
 
 .tile {
   position: absolute;
+  border-radius: 3px;
+  background: #fff;
   -webkit-transition: 100ms ease-in-out;
   -moz-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
@@ -438,129 +443,82 @@ hr {
 }
 
 .tile .tile-inner {
-  border-radius: 3px;
-  background: #eee4da;
   text-align: center;
-  font-weight: bold;
   z-index: 10;
-  font-size: 55px;
+  font-size: 40px;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 66px;
 }
 
 .tile.tile-2 .tile-inner {
-  background: #eee4da;
-  background: url(../images/2.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #bcccff;
+  color: #a60d12;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 
 .tile.tile-4 .tile-inner {
-  background: #ede0c8;
-  background: url(../images/3.png);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #9ef283;
+  color: #252525;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 
 .tile.tile-8 .tile-inner {
-  color: #f9f6f2;
-  background: #f2b179;
-  background: url(../images/4.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #9ef283;
+  color: #9a0d13;
 }
 
 .tile.tile-16 .tile-inner {
-  color: #f9f6f2;
-  background: #f59563;
-  background: url(../images/5.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #a0f284;
+  color: #9a0d13;
 }
 
 .tile.tile-32 .tile-inner {
-  color: #f9f6f2;
-  background: #f67c5f;
-  background: url(../images/6.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #ffae7f;
+  color: #252525;
 }
 
 .tile.tile-64 .tile-inner {
-  color: #f9f6f2;
-  background: #f65e3b;
-  background: url(../images/7.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #ff9998;
+  color: #252525;
 }
 
 .tile.tile-128 .tile-inner {
-  color: #f9f6f2;
-  background: #edcf72;
-  background: url(../images/8.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #98fee6;
+  color: #252525;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
-  font-size: 45px; }
-
-  @media screen and (max-width: 520px) {
-    .tile.tile-128 .tile-inner {
-      font-size: 25px; } }
+}
 
 .tile.tile-256 .tile-inner {
-  color: #f9f6f2;
-  background: #edcc61;
-  background: url(../images/9.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #a0f284;
+  color: #000296;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
-  font-size: 45px; }
-
-  @media screen and (max-width: 520px) {
-    .tile.tile-256 .tile-inner {
-      font-size: 25px; } }
+}
 
 .tile.tile-512 .tile-inner {
-  color: #f9f6f2;
-  background: #edc850;
-  background: url(../images/10.jpg);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #bcccff;
+  color: #8e110b;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
-  font-size: 45px; }
-
-  @media screen and (max-width: 520px) {
-    .tile.tile-512 .tile-inner {
-      font-size: 25px; } }
-
+}
 
 .tile.tile-1024 .tile-inner {
-  color: #f9f6f2;
-  background: #edc53f;
-  background: url(../images/11.png);
-  background-size: contain;
-  color: rgba(0,0,0,0);
+  background-color: #ff9999;
+  color: #252525;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
-  font-size: 35px; }
-
-  @media screen and (max-width: 520px) {
-    .tile.tile-1024 .tile-inner {
-      font-size: 15px; } }
-
+}
 
 .tile.tile-2048 .tile-inner {
-  color: #f9f6f2;
-  background: #edc22e;
-  background: url(../images/1.jpg);
+  background: url(../images/2048.jpg);
   background-size: contain;
-  color: rgba(0,0,0,0);
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
-  font-size: 35px; }
-
-  @media screen and (max-width: 520px) {
-    .tile.tile-2048 .tile-inner {
-      font-size: 15px; } }
-
+}
 
 .tile.tile-super .tile-inner {
   color: #f9f6f2;
@@ -687,17 +645,15 @@ hr {
   display: inline-block;
   background: black;
   border-radius: 10px;
-  padding: 0 20px;
   text-decoration: none;
   color: white;
   height: 50px;
-  line-height: 60px;
+  line-height: 50px;
   display: inline-block;
   text-align: center;
-  margin-top: 30px;
-  position:relative;
-  bottom:12px;
-  padding:8px
+  position: relative;
+  bottom: 19px;
+  padding: 8px;
 }
 
 .game-explanation {
