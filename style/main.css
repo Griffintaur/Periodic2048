@@ -132,6 +132,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 strong.important {
   text-transform: uppercase;
   color:black;
@@ -687,17 +691,15 @@ hr {
   display: inline-block;
   background: black;
   border-radius: 10px;
-  padding: 0 20px;
   text-decoration: none;
   color: white;
   height: 50px;
-  line-height: 60px;
+  line-height: 50px;
   display: inline-block;
   text-align: center;
-  margin-top: 30px;
-  position:relative;
-  bottom:12px;
-  padding:8px
+  position: relative;
+  bottom: 19px;
+  padding: 8px;
 }
 
 .game-explanation {
