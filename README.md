@@ -4,7 +4,7 @@ Periodic Elemental 2048 is a periodic table of elements inspired game based on t
 
 Instead of numbers, we have elements of the periodic table represented by their symbols. When combined, they form higher periodic table elements.
 
-My main objective was to make learning fun instead of boring. The aim here is to learn chemical reactions via playing 2048.
+My main objective was to make learning fun instead of boring. The aim here is to learn chemical reactions via playing 2048. The gamification would help with the memorization aspect of chemistry. 
 
 ## To Do:
 
