@@ -50,7 +50,7 @@ KeyboardInputManager.prototype.listen = function () {
   };
 
   // Respond to direction keys
-  document.addEventListener("keydown", function (event) {
+  document.addEventListener("keydown", (event) => {
     var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
                     event.shiftKey;
     var mapped    = map[event.which];
@@ -77,7 +77,7 @@ KeyboardInputManager.prototype.listen = function () {
   var touchStartClientX, touchStartClientY;
   var gameContainer = document.getElementsByClassName("game-container")[0];
 
-  gameContainer.addEventListener(this.eventTouchstart, function (event) {
+  gameContainer.addEventListener(this.eventTouchstart, (event) =>{
     if ((!window.navigator.msPointerEnabled && event.touches.length > 1) ||
         event.targetTouches > 1) {
       return; // Ignore if touching with more than 1 finger
@@ -94,11 +94,11 @@ KeyboardInputManager.prototype.listen = function () {
     event.preventDefault();
   });
 
-  gameContainer.addEventListener(this.eventTouchmove, function (event) {
+  gameContainer.addEventListener(this.eventTouchmove, (event) =>{
     event.preventDefault();
   });
 
-  gameContainer.addEventListener(this.eventTouchend, function (event) {
+  gameContainer.addEventListener(this.eventTouchend,  (event) => {
     if ((!window.navigator.msPointerEnabled && event.touches.length > 0) ||
         event.targetTouches > 0) {
       return; // Ignore if still touching with one or more fingers
@@ -127,17 +127,17 @@ KeyboardInputManager.prototype.listen = function () {
   });
 };
 
-KeyboardInputManager.prototype.restart = function (event) {
+KeyboardInputManager.prototype.restart = function(event){
   event.preventDefault();
   this.emit("restart");
 };
 
-KeyboardInputManager.prototype.keepPlaying = function (event) {
+KeyboardInputManager.prototype.keepPlaying = function(event){
   event.preventDefault();
   this.emit("keepPlaying");
 };
 
-KeyboardInputManager.prototype.bindButtonPress = function (selector, fn) {
+KeyboardInputManager.prototype.bindButtonPress =  function(selector, fn) {
   var button = document.querySelector(selector);
   button.addEventListener("click", fn.bind(this));
   button.addEventListener(this.eventTouchend, fn.bind(this));
