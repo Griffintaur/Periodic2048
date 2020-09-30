@@ -65,10 +65,13 @@ GameManager.prototype.addStartTiles = function () {
   }
 };
 
-// Adds a tile in a random position
+// Adds a "random" tile in a "random available" position
 GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.9 ? 2 : 4;
+		var x = (new Date()).getMilliseconds() / 991.0;
+
+		// Probalistic Tile Addition (Three Part Additon)
+		var value = (x < 0.31) ? 2 : (x < 0.67 ? 4 : 8);
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);

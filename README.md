@@ -13,6 +13,7 @@ My main objective was to make learning fun instead of boring. The aim here is to
 - [ ] Level 2 Introduction of radicals and combination of elements and radicals to form compounds e.g (H<sub>2</sub>SO<sub>4</sub>)
 - [ ] Level 3 Chemical reactions between compounds e.g (HCl + NaOH -> Nacl + H<sub>2</sub>0)
 - [X] Elements up to Potassium have been introduced
+- [X] Randomize Tile addition to make the Gameplay Interesting
 - [ ] Elements after Potassium to be introduced
 - [ ] Concepts of Inert Gases can be introduced and they will not do anything when combined with other elements showing their inertness to reactions
 - [ ] Further suggestions for improvement
@@ -31,4 +32,3 @@ The code is released under MIT license and free to use.
 Changes and improvements are more than welcome! Feel free to fork and open a pull request.
 
   [![Donate](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://www.paypal.me/kitabkalam/25usd)
-
