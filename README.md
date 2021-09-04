@@ -32,3 +32,5 @@ Changes and improvements are more than welcome! Feel free to fork and open a pul
 
   [![Donate](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://www.paypal.me/kitabkalam/25usd)
 
+## Status
+The project is not actively maintained. I am happy to accept PRs on the project.
