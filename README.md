@@ -1,6 +1,6 @@
 # Periodic Elemental 2048
 
-Periodic Elemental 2048 is a periodic table of elements inspired game based on the famous 2048 game.
+Periodic Elemental 2048 is a game based on the famous 2048 game inspired by periodic table of elements.
 
 Instead of numbers, we have elements of the periodic table represented by their symbols. When combined, they form higher periodic table elements.
 
