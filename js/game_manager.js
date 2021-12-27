@@ -56,6 +56,17 @@ GameManager.prototype.setup = function () {
 
   // Update the actuator
   this.actuate();
+  this.startPopup();
+};
+GameManager.prototype.startPopup = function () {
+  window.setTimeout( function() {
+    elements=["Hydrogen: 1", "Helium: 2", "Lithium: 3", "Beryllium: 4", "Boron: 5", "Carbon: 6", 
+    "Nitrogen: 7", "Oxygen: 8", "Flourine: 9", "Neon: 10"]
+    newNum = Math.floor(Math.random() * 9) + 1
+  
+    window.alert(elements[newNum]);
+
+  }, 20000); // From 10 to 110 secconds
 };
 
 // Set up the initial tiles to start the game with

@@ -186,6 +186,9 @@ hr {
   height:100px;
   display:inline-block;
 }
+.tableImage {
+margin-top: 5px;
+}
 
 @-webkit-keyframes fade-in {
   0% {
