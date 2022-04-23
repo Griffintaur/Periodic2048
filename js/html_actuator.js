@@ -3,16 +3,16 @@ function HTMLActuator() {
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
-  this.funFactContainer = ["The only two non-silvery metals are gold and copper",
-  "Bromine and Mercury are the only elements that are liquid at room temperature",
-  "Oxygen is colourless in gas state but it is blue in solid and liquid state",
-  "Dry ice is the solid form of carbon dioxide (CO2)",
-  "The densest known stable element on the earth is Osmium.",
-  "The only letter not in the periodic table is the letter J",
-  "Dmitri Mendeleyev is the inventor of the modern periodic table",
-  "As of now, there are a total of 118 elements in the Periodic table",
-  "Although Helium (He) is present on Earth — it was discovered by observing the Sun!",
-  "Which is the most reactive element? Well, it is Fluorine (F)"];
+  this.funFactContainer = ["Bromine and Mercury are the only elements that are liquid at room temperature",
+    "Oxygen is colourless in gas state but it is blue in solid and liquid state",
+    "Dry ice is the solid form of carbon dioxide (CO2)",
+    "The densest known stable element on the earth is Osmium.",
+    "The only letter not in the periodic table is the letter J",
+    "Dmitri Mendeleyev is the inventor of the modern periodic table",
+    "As of now, there are a total of 118 elements in the Periodic table",
+    "Although Helium (He) is present on Earth — it was discovered by observing the Sun!",
+    "Which is the most reactive element? Well, it is Fluorine (F)",
+    "The only two non-silvery metals are gold and copper"];
   this.score = 0;
 }
 
@@ -142,7 +142,7 @@ HTMLActuator.prototype.message = function (won) {
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
 
   newNum = Math.floor(Math.random() * 10);
-  this.messageContainer.getElementsByTagName("p")[1].style.fontSize = "16px";
+  this.messageContainer.getElementsByTagName("p")[1].style.fontSize = "13px";
   this.messageContainer.getElementsByTagName("p")[1].textContent = this.funFactContainer[newNum];
 
 
