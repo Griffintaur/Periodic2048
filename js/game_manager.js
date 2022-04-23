@@ -43,6 +43,12 @@ GameManager.prototype.setup = function () {
     this.over        = previousState.over;
     this.won         = previousState.won;
     this.keepPlaying = previousState.keepPlaying;
+    this.a2        = previousState.a2;
+    this.a4        = previousState.a4;
+    this.a8        = previousState.a8;
+    this.a16        = previousState.a16;
+    this.a32        = previousState.a32;
+    this.a64        = previousState.a64;
     this.a128        = previousState.a128;
     this.a256        = previousState.a256;
     this.a512        = previousState.a512;
@@ -54,6 +60,12 @@ GameManager.prototype.setup = function () {
     this.over        = false;
     this.won         = false;
     this.keepPlaying = false;
+    this.a2        = false;
+    this.a4        = false;
+    this.a8        = false;
+    this.a16        = false;
+    this.a32        = false;
+    this.a64        = false;
     this.a128        = false;
     this.a256        = false;
     this.a512        = false;
@@ -66,24 +78,27 @@ GameManager.prototype.setup = function () {
 
   // Update the actuator
   this.actuate();
-  this.startPopup();
+  // this.startPopup();
 };
-GameManager.prototype.startPopup = function () {
-  window.setTimeout( function() {
-    elements=["Hydrogen: 1", "Helium: 2", "Lithium: 3", "Beryllium: 4", "Boron: 5", "Carbon: 6", 
-    "Nitrogen: 7", "Oxygen: 8", "Flourine: 9", "Neon: 10"]
-    newNum = Math.floor(Math.random() * 9) + 1
+// GameManager.prototype.startPopup = function () {
+//   window.setTimeout( function() {
+//     elements=["Hydrogen: 1", "Helium: 2", "Lithium: 3", "Beryllium: 4", "Boron: 5", "Carbon: 6", 
+//     "Nitrogen: 7", "Oxygen: 8", "Flourine: 9", "Neon: 10"]
+//     newNum = Math.floor(Math.random() * 9) + 1
   
-    window.alert(elements[newNum]);
+//     window.alert(elements[newNum]);
 
-  }, 20000); // From 10 to 110 secconds
-};
+//   }, 20000); // From 10 to 110 secconds
+// };
 
 // Set up the initial tiles to start the game with
 GameManager.prototype.addStartTiles = function () {
   for (var i = 0; i < this.startTiles; i++) {
     this.addRandomTile();
+    //Initial He popup
+    window.alert("Helium(He): 2");
   }
+  // 2 = He
 };
 
 // Adds a tile in a random position
@@ -210,7 +225,37 @@ GameManager.prototype.move = function (direction) {
             self.won = true;  
           }*/
           //debugging code end
-
+          // 2 = He
+          // if(merged.value == 2 && self.a2 == false) {
+          //   self.a2 = true;
+          //        window.alert("Helium: 2");
+          //   }
+          // }
+          // 4 = Be
+          if(merged.value == 4 && self.a4 == false) {
+            self.a4 = true;
+            window.alert("Beryllium(Be): 4");
+          }
+          // 8 = O
+          if(merged.value == 8 && self.a8 == false) {
+            self.a8 = true;
+            window.alert("Oxygen(O): 8");
+          }
+          // 16 = S
+          if(merged.value == 16 && self.a16 == false) {
+            self.a16 = true;
+            window.alert("Sulfur(S): 16");
+          }
+          // 32 = Ge
+          if(merged.value == 32 && self.a32 == false) {
+            self.a32 = true;
+            window.alert("Germanium(Ge): 32");
+          }
+          // 64 = Gd
+          if(merged.value == 64 && self.a64 == false) {
+            self.a64 = true;
+            window.alert("Gadolinimum(Gd): 64");
+          }
           // The mighty 128 tile
           if(merged.value == 128 && self.a128 == false) {
             self.a128 = true;
