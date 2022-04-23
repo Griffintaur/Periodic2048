@@ -43,12 +43,22 @@ GameManager.prototype.setup = function () {
     this.over        = previousState.over;
     this.won         = previousState.won;
     this.keepPlaying = previousState.keepPlaying;
+    this.a128        = previousState.a128;
+    this.a256        = previousState.a256;
+    this.a512        = previousState.a512;
+    this.a1024       = previousState.a1024;
+    this.a2048       = previousState.a2048;
   } else {
     this.grid        = new Grid(this.size);
     this.score       = 0;
     this.over        = false;
     this.won         = false;
     this.keepPlaying = false;
+    this.a128        = false;
+    this.a256        = false;
+    this.a512        = false;
+    this.a1024       = false;
+    this.a2048       = false;
 
     // Add the initial tiles
     this.addStartTiles();
@@ -137,6 +147,10 @@ GameManager.prototype.moveTile = function (tile, cell) {
   tile.updatePosition(cell);
 };
 
+GameManager.prototype.newpop = function () {
+   
+};
+
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
   // 0: up, 1: right, 2: down, 3: left
@@ -177,9 +191,92 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
+          /****** Level 2 implementation *********/
+
+          //debugging code (gives popup at creation of S)
+         /* if(merged.value == 16 && self.a128 == false) {
+            self.a128 = true;
+
+            window.alert("Congrats! You reached the 128 tile. Since there are only 118 elements in the periodic table, we will now represent bigger numbers with compounds of the same molecular weight.");
+            let ans = window.prompt("What is the approximate molecular weight of HI (enter an integer): ", "");
+            if (ans == "128") {
+                 window.alert("Correct!");
+            }
+            else {
+                window.alert("Incorrect. The molecular weight of HI is 128.");
+            }
+          }
+          if(merged.value == 32 && self.a128 == true) {
+            self.won = true;  
+          }*/
+          //debugging code end
+
+          // The mighty 128 tile
+          if(merged.value == 128 && self.a128 == false) {
+            self.a128 = true;
+
+            window.alert("Congrats! You reached the 128 tile. Since there are only 118 elements in the periodic table, we will now represent bigger numbers with compounds of the same molecular weight.");
+            let ans = window.prompt("What is the approximate molecular weight of HI (enter an integer): ", "");
+            if (ans == "128") {
+                 window.alert("Correct!");
+            }
+            else {
+                window.alert("Incorrect. The molecular weight of HI is 128.");
+            }
+          }
+          // The mighty 256 tile
+          if(merged.value == 256 && self.a256 == false) {
+            self.a256 = true;
+            
+            let ans = window.prompt("What is the approximate molecular weight of As3P (enter an integer): ", "");
+            if (ans == "256") {
+                 window.alert("Correct!");
+            }
+            else {
+                window.alert("Incorrect. The molecular weight of As3P is 256.");
+            }
+
+          }
+          // The mighty 512 tile
+          if(merged.value == 512 && self.a512 == false) {
+            self.a512 = true;
+            let ans = window.prompt("What is the approximate molecular weight of C25H34F6O4 (enter an integer): ", "");
+            if (ans == "512") {
+                 window.alert("Correct!");
+            }
+            else {
+                window.alert("Incorrect. The molecular weight of C25H34F6O4 is 512.");
+            }
+
+          }
+          // The mighty 1024 tile
+          if(merged.value == 1024 && self.a1024 == false) {
+            self.a1024 = true;
+            let ans = window.prompt("What is the approximate molecular weight of C70Na8 (enter an integer): ", "");
+            if (ans == "1024") {
+                 window.alert("Correct!");
+            }
+            else {
+                window.alert("Incorrect. The molecular weight of C70Na8 is 1024.");
+            }
+
+          }
           // The mighty 2048 tile
-          if (merged.value === 2048) self.won = true;
-        } else {
+          if(merged.value == 2048 && self.a2048 == false) {
+            self.a2048 = true;
+            let ans = window.prompt("What is the approximate molecular weight of Au9Ga4 (enter an integer): ", "");
+            if (ans == "2048") {
+                 window.alert("Correct!");
+            }
+            else {
+                window.alert("Incorrect. The molecular weight of Au9Ga4 is 2048.");
+            }
+            self.won = true;
+          }
+
+          
+        } 
+        else {
           self.moveTile(tile, positions.farthest);
         }
 
